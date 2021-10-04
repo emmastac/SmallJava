@@ -8,9 +8,7 @@ import whatever.Trees.Node;
 
 
 public class AlberHallConcerts {
-
 	
-
 	public static void main( String [ ] args ) {
 
 		int N = 365;
@@ -19,14 +17,9 @@ public class AlberHallConcerts {
 
 		int pending = 10;
 		int d = 4;
-
 	}
 	
-	
-	
 	public class Calendar{
-		
-		
 		
 		IntervalNode root;
 		
@@ -35,9 +28,6 @@ public class AlberHallConcerts {
 			root.d0 = 0;
 			root.d1 = 365;
 		}
-		
-		
-		
 		
 		public IntervalNode findNode(int d){
 			IntervalNode n = root;
@@ -50,23 +40,15 @@ public class AlberHallConcerts {
 			}}
 		}
 		
-		
 		public IntervalNode findNextNode(int d){
 			
 			IntervalNode n = root;
-			
 			
 			if( ( (IntervalNode) n.left).d0 < d && ( (IntervalNode) n.right).d0 < d ){
 				return n;
 			}
 			return null;
-			
 		}
-		
-		
-		
-		
-		
 	}
 	
 	public class IntervalNode {
@@ -77,7 +59,6 @@ public class AlberHallConcerts {
 		public int d0;
 		public int d1;
 
-
 		public int compare( IntervalNode n ) {
 
 			int there =  n.left.d0;
@@ -86,7 +67,7 @@ public class AlberHallConcerts {
 		}
 		
 		public int compareStart( IntervalNode n ) {
-
+			
 			return compare(n);
 		}
 		
@@ -97,8 +78,4 @@ public class AlberHallConcerts {
 			return ( here - there );
 		}
 	}
-
-	
-	
-
 }
